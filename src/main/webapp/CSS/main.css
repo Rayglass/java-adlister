@@ -1,0 +1,64 @@
+#btn{
+
+    display: block;
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    text-align: center;
+    border-radius: 4px;
+    background-color: yellow;
+    color: black;
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    background-image: url("https://cdn.pixabay.com/photo/2017/11/26/16/36/landscape-2979296_1280.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 50px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 54px;
+    color: whitesmoke;
+    margin-bottom: 20px;
+}
+
+.navbar {
+    background-color: whitesmoke;
+    color: #fff;
+    padding: 10px 0;
+}
+
+.navbar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    font-weight: bold;
+}
+
+.navbar ul li {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.navbar ul li a {
+    color: #000; /* Set to black */
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.navbar ul li a:hover {
+    color: #ccc;
+}

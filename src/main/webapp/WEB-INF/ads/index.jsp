@@ -2,34 +2,40 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <jsp:include page="../partials/head.jsp">
+    <jsp:include page="/WEB-INF/partials/head.jsp">
         <jsp:param name="title" value="Viewing All The Ads" />
     </jsp:include>
+
+    <link rel="stylesheet" type="text/css" href="../../CSS/index.css">
+
 </head>
 <body>
-<jsp:include page="../partials/navbar.jsp" />
-
+<jsp:include page="/WEB-INF/partials/navbar.jsp" />
 
 <div class="container">
-    <div class="jumbotron jumbotron-fluid mt-3 bg-white text-primary border border-primary">
-        <div class="container">
-            <h1 class="display-4 text-center">Here are all the ads!</h1>
-        </div>
+    <h1>Here Are all the ads!</h1>
+
+    <%--    <c:forEach var="ad" items="${ads}">--%>
+    <%--        <div class="col-md-6">--%>
+    <%--            <h2><a href=“ads/ad?id=${ad.id}“>${ad.title}</a></h2>--%>
+    <%--            <p>${ad.description}</p>--%>
+
+    <%--        </div>--%>
+    <%--    </c:forEach>--%>
+    <%--    <c:forEach var="ad" items="${ads}">--%>
+    <%--        <div class="col-md-6">--%>
+    <%--            <h2><a href="${"/WEB-INF/ads/ad"}?id=${ad.id}">${ad.title}</a></h2>--%>
+    <%--            <p>${ad.description}</p>--%>
+    <%--        </div>--%>
+    <%--    </c:forEach>--%>
+    <%--</div>--%>
+
+    <c:forEach var="ad" items="${ads}">
+    <div class="ad-card">
+        <h2><a href="/ShowAdServlet?id=${ad.id}">${ad.title}</a></h2>
+        <p>${ad.description}</p>
     </div>
-    <div class="row row-cols-1 row-cols-md-3">
-        <c:forEach var="ad" items="${ads}">
-            <div class="col mb-4">
-                <div class="card h-100" style="width: 21.5rem;">
-                    <div class="card-body">
-                        <h2 class = card-title>${ad.title}</h2>
-                        <p>${ad.userId}</p>
-                        <p>${ad.description}</p>
-                    </div>
-                </div>
-            </div>
-        </c:forEach>
-    </div>
-</div>
+    </c:forEach>
 
 </body>
 </html>

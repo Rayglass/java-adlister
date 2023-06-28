@@ -8,19 +8,26 @@ public interface Ads {
     // get a list of all the ads
     List<Ad> all();
     // insert a new ad and return the new ad's id
+//    Long insert(Ad ad);
+
+
+
+    public List<Ad> AdSearch(String userSearch);
+
     Long insert(Ad ad);
-    int getIdFromAd(String title);
-    // find Ad by ID
-    Ad findById(Long id);
-    // get a list of searched ads
-    List<Ad> findAds(String keywords);
-    // get a list of ads based on ID
-    List<Ad> findAds(Long id);
-    // delete an ad
-    boolean deleteAd(Long id);
-    // updaate an ad
-    void updateAd(Ad adToBeUpdate);
-    // ======NEW CODE=============
-    List<Ad> setCategoryWithAd(List<Ad> ad);
-//    ==========================
+
+
+    Ad findById(long id);
+
+    List<Ad> findByUserId(long id);
+
+
+
+    void deleteAd(Long id);
+
+    Ad getAd(long adId);
+
+    void updateAd(Ad ad);
+
+    Ad selectAdById(Long aLong);
 }

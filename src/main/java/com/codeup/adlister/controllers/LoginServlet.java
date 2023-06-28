@@ -40,7 +40,7 @@ public class LoginServlet extends HttpServlet {
         User user = DaoFactory.getUsersDao().findByUsername(username);
 
         if (user == null) {
-            response.sendRedirect("/login");
+            response.sendRedirect("/error");
             return;
         }
 
@@ -52,8 +52,8 @@ public class LoginServlet extends HttpServlet {
             response.sendRedirect("/profile");
         } else {
 
-            request.getRequestDispatcher("/WEB-INF/login.jsp").forward(request, response);
-            response.sendRedirect("/login");
+            request.getRequestDispatcher("/WEB-INF/error.jsp").forward(request, response);
+            response.sendRedirect("/error");
 
 
             String redirect = (String) request.getSession().getAttribute("desiredPage");

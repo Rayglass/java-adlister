@@ -1,10 +1,11 @@
 /* login.css */
 
+
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    background-image: url("https://images.pexels.com/photos/2882566/pexels-photo-2882566.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2");
-    background-repeat: no-repeat;
+    font-family: Krungthep, sans-serif;
+    background-color: whitesmoke;
+    background-image: linear-gradient(275deg, cyan, lightcyan);
+    /*background-repeat: no-repeat;*/
     background-size: cover;
 }
 
@@ -68,4 +69,5 @@ input[type="password"] {
     /*background-color: yellow;*/
     color: black;
     padding: 10px 5px;
+    border-bottom-color: darkblue;
 }
